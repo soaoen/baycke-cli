@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-process.title = 'song';
+process.title = 'baycke';
 const program = require('commander');
 const song = require('../lib/song-generate');
 const chalk = require('chalk');

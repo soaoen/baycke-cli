@@ -1,5 +1,5 @@
 {
-    "name": "baycke-cli",
+    "name": "@baycke/cli",
     "version": "1.1.2",
     "description": "百科后台管理系统",
     "main": "index.js",
@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "baycke": "./bin/index.js"
+        "bk": "./bin/index.js"
     },
     "author": "宋宝文",
     "license": "MIT",
