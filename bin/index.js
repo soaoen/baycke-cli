@@ -27,7 +27,7 @@ program
         if (!type || !filepath) {
             console.log('');
             console.log(error('是不是没整明白:'));
-            console.log(error('    生产文件的类型和文件路径是必须的命令，请查看帮助！'));
+            console.log(error('    生成文件需要类型和文件路径，这是必须的命令，要不去查看帮助！'));
             console.log('');
             options.outputHelp();
             printGenerateExamples();
