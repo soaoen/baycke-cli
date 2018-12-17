@@ -1,0 +1,27 @@
+{
+    "name": "@song/cli",
+    "version": "1.1.2",
+    "description": "百科后台管理系统",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "song": "./bin/index.js"
+    },
+    "author": "宋宝文",
+    "license": "MIT",
+    "engines": {
+        "node": ">=4.0.0"
+    },
+    "dependencies": {
+        "art-template": "^4.13.2",
+        "chalk": "^2.4.1",
+        "commander": "^2.19.0",
+        "fs-extra": "^7.0.1",
+        "inquirer": "^6.2.1",
+        "lodash": "^4.17.11",
+        "pluralize": "^7.0.0",
+        "shelljs": "^0.7.7"
+    }
+}

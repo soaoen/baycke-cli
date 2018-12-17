@@ -1,0 +1,88 @@
+﻿/**
+ * @Copy Right 2018 北京百刻科技有限公司
+ * Created by 宋宝文 on 2018/11/23.
+ * The file name is {{file.name}}.controller.ts
+ * platform 百刻科技后端管理平台
+ * Project 商城管理系统
+ * The file was last modified on 2018/11/23
+ * PIC 宋宝文
+ * author 宋宝文
+ * Modifier 宋宝文
+ * Functions 订单信息
+ */
+import { Context } from 'koa';
+import { {{file.startCaseName}} } from './{{file.name}}.model';
+import { DbService } from '../../../services';
+const {{file.camelCaseName}}Service = new DbService({{file.startCaseName}});
+
+export class {{file.startCaseName}}Controller {
+    /**
+     * 集合
+     * @Author   宋宝文
+     * @DateTime 2018年11月23日 11时
+     * @param    {Object}             ctx json对象
+     * @return   {Object}                 返回json 数据
+     */
+    async list(ctx: Context): Promise<any> {
+        const query = ctx.request.body;
+        const {{file.pluralName}} = await {{file.camelCaseName}}Service.getList(query)
+        ctx.body = { {{file.pluralName}} };
+    };
+
+    /**
+     * 详情
+     * @Author   宋宝文
+     * @DateTime 2018年11月23日 11时
+     * @param    {Object}             ctx json对象
+     * @return   {Object}                 返回json 数据
+     */
+    async detail(ctx: Context): Promise<any> {
+        const id = ctx.params.id;
+        const {{file.camelCaseName}} = await {{file.startCaseName}}.findById(id);
+        ctx.body = { {{file.camelCaseName}} };
+    };
+
+    /**
+     * 保存
+     * @Author   宋宝文
+     * @DateTime 2018年11月23日 11时
+     * @param    {Object}             ctx json对象
+     * @return   {Object}                 返回json 数据
+     */
+    async create(ctx: Context): Promise<any> {
+        const {{file.camelCaseName}}goodses = [];
+
+        const {{file.camelCaseName}}Obj = ctx.request.body.{{file.camelCaseName}}; // 订单信息
+
+        const _order = new {{file.startCaseName}}({{file.camelCaseName}}Obj);
+        const {{file.camelCaseName}} = await _order.save();
+
+        ctx.body = { {{file.camelCaseName}}, {{file.camelCaseName}}goodses };
+    };
+
+    /**
+     * 更新
+     * @Author   宋宝文
+     * @DateTime 2018年11月23日 11时
+     * @param    {Object}             ctx json对象
+     * @return   {Object}                 返回json 数据
+     */
+    async update(ctx: Context): Promise<any> {
+        const {{file.camelCaseName}}Obj = ctx.request.body.{{file.camelCaseName}};
+        const {{file.camelCaseName}} = await {{file.camelCaseName}}Service.update({{file.camelCaseName}}Obj);
+        ctx.body = { {{file.camelCaseName}} };
+    };
+
+    /**
+     * 删除
+     * @Author   宋宝文
+     * @DateTime 2018年11月23日 11时
+     * @param    {Object}             ctx json对象
+     * @return   {Object}                 返回json 数据
+     */
+    async del(ctx: Context): Promise<any> {
+        const id = ctx.request.body.id;
+        const status = await {{file.startCaseName}}.findByIdAndRemove(id);
+        ctx.body = { status };
+    };
+}

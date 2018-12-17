@@ -1,0 +1,25 @@
+﻿/**
+ * @Copy Right 2018 北京百刻科技有限公司
+ * Created by 宋宝文 on {{date}}.
+ * The file name is {{file.startCaseName}}.router.ts
+ * platform 百刻科技后端管理平台
+ * Project {{file.project}}管理系统
+ * The file was last modified on {{date}}
+ * PIC 宋宝文
+ * author 宋宝文
+ * Modifier 宋宝文
+ * Functions {{file.description}}
+ */
+import * as Router from 'koa-router';
+import { {{file.startCaseName}} } from './{{file.name}}.controller';
+const router = new Router();
+const {{file.camelCaseName}} = new {{file.startCaseName}}Controller();
+
+router
+    .post('/list', {{file.camelCaseName}}.list) // 列表
+    .post('/create', {{file.camelCaseName}}.create) // 创建
+    .get('/detail/:id', {{file.camelCaseName}}.detail) // 获取页
+    .post('/update', {{file.camelCaseName}}.update) // 更新
+    .post('/delete', {{file.camelCaseName}}.del) // 删除
+
+export { router };
