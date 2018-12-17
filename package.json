@@ -12,7 +12,7 @@
     "author": "宋宝文",
     "license": "MIT",
     "engines": {
-        "node": ">=4.0.0"
+        "node": ">=7.0.0"
     },
     "dependencies": {
         "art-template": "^4.13.2",
