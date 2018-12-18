@@ -13,21 +13,21 @@
 import { Document, Model, model } from 'mongoose';
 
 /**
- * 订单信息文档
+ * {{file.description}}文档
  */
 export interface I{{file.startCaseName}}Document extends Document {
 	
 }
 
 /**
- * 订单信息
+ * {{file.description}}
  */
 export interface I{{file.startCaseName}} extends I{{file.startCaseName}}Document {
 
 }
 
 /**
- * 订单信息模型
+ * {{file.description}}模型
  */
 export interface I{{file.startCaseName}}Model extends Model<I{{file.startCaseName}}> {
     
