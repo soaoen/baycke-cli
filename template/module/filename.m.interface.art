@@ -17,6 +17,23 @@ import { Document, Model, model } from 'mongoose';
  */
 export interface I{{file.startCaseName}}Document extends Document {
 	
+	/**
+     * 备注
+     * @type {string}
+     */
+    note?: string;
+
+    /**
+     * 创建时间
+     * @type {Date}
+     */
+    createdAt: Date;
+
+    /**
+     * 更新时间
+     * @type {Date}
+     */
+    updatedAt: Date;
 }
 
 /**
