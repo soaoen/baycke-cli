@@ -18,7 +18,7 @@ const {{file.camelCaseName}} = new {{file.startCaseName}}Controller();
 router
     .post('/list', {{file.camelCaseName}}.list) // 列表
     .post('/create', {{file.camelCaseName}}.create) // 创建
-    .get('/detail/:id', {{file.camelCaseName}}.detail) // 获取页
+    .get('/detail/:id', {{file.camelCaseName}}.detail) // 获取详情
     .post('/update', {{file.camelCaseName}}.update) // 更新
     .post('/delete', {{file.camelCaseName}}.del) // 删除
 
