@@ -11,7 +11,7 @@
  * Functions {{file.description}}
  */
 import { Schema, model, SchemaTypes } from 'mongoose';
-import { I{{file.startCaseName}}, I{{file.startCaseName}}Document, I{{file.startCaseName}}Model, IHandleOption } from './{{file.name}}.interface';
+import { I{{file.startCaseName}}, I{{file.startCaseName}}Document, I{{file.startCaseName}}Model } from './{{file.name}}.interface';
 import * as _ from 'lodash';
 
 const {{file.startCaseName}}Schema = new Schema({

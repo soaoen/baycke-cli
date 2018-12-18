@@ -1,21 +1,21 @@
 ﻿/**
  * @Copy Right 2018 北京百刻科技有限公司
- * Created by 宋宝文 on {{date}}.
- * The file name is {{file.name}}.controller.ts
+ * Created by 宋宝文 on Tue Dec 18 2018 13:14:58 GMT+0800 (CST).
+ * The file name is rating.controller.ts
  * platform 百刻科技后端管理平台
- * Project {{file.project}}管理系统
- * The file was last modified on {{date}}
+ * Project 认证管理系统
+ * The file was last modified on Tue Dec 18 2018 13:14:58 GMT+0800 (CST)
  * PIC 宋宝文
  * author 宋宝文
  * Modifier 宋宝文
- * Functions {{file.description}}
+ * Functions 评价设置
  */
 import { Context } from 'koa';
-import { {{file.startCaseName}} } from './{{file.name}}.model';
+import { Rating } from './rating.model';
 import { DbService } from '../../../services';
-const {{file.camelCaseName}}Service = new DbService({{file.startCaseName}});
+const ratingService = new DbService(Rating);
 
-export class {{file.startCaseName}}Controller {
+export class RatingController {
     /**
      * 集合
      * @Author   宋宝文
@@ -25,8 +25,8 @@ export class {{file.startCaseName}}Controller {
      */
     async list(ctx: Context): Promise<any> {
         const query = ctx.request.body;
-        const {{file.pluralName}} = await {{file.camelCaseName}}Service.getList(query)
-        ctx.body = { {{file.pluralName}} };
+        const ratings = await ratingService.getList(query)
+        ctx.body = { ratings };
     };
 
     /**
@@ -38,8 +38,8 @@ export class {{file.startCaseName}}Controller {
      */
     async detail(ctx: Context): Promise<any> {
         const id = ctx.params.id;
-        const {{file.camelCaseName}} = await {{file.startCaseName}}.findById(id);
-        ctx.body = { {{file.camelCaseName}} };
+        const rating = await Rating.findById(id);
+        ctx.body = { rating };
     };
 
     /**
@@ -50,12 +50,12 @@ export class {{file.startCaseName}}Controller {
      * @return   {Object}                 返回json 数据
      */
     async create(ctx: Context): Promise<any> {
-        const {{file.camelCaseName}}Obj = ctx.request.body.{{file.camelCaseName}}; // 订单信息
+        const ratingObj = ctx.request.body.rating; // 订单信息
 
-        const _{{file.camelCaseName}} = new {{file.startCaseName}}({{file.camelCaseName}}Obj);
-        const {{file.camelCaseName}} = await _{{file.camelCaseName}}.save();
+        const _rating = new Rating(ratingObj);
+        const rating = await _rating.save();
 
-        ctx.body = { {{file.camelCaseName}} };
+        ctx.body = { rating };
     };
 
     /**
@@ -66,9 +66,9 @@ export class {{file.startCaseName}}Controller {
      * @return   {Object}                 返回json 数据
      */
     async update(ctx: Context): Promise<any> {
-        const {{file.camelCaseName}}Obj = ctx.request.body.{{file.camelCaseName}};
-        const {{file.camelCaseName}} = await {{file.camelCaseName}}Service.update({{file.camelCaseName}}Obj);
-        ctx.body = { {{file.camelCaseName}} };
+        const ratingObj = ctx.request.body.rating;
+        const rating = await ratingService.update(ratingObj);
+        ctx.body = { rating };
     };
 
     /**
@@ -80,7 +80,7 @@ export class {{file.startCaseName}}Controller {
      */
     async del(ctx: Context): Promise<any> {
         const id = ctx.request.body.id;
-        const status = await {{file.startCaseName}}.findByIdAndRemove(id);
+        const status = await Rating.findByIdAndRemove(id);
         ctx.body = { status };
     };
 }

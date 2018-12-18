@@ -11,7 +11,7 @@
  * Functions {{file.description}}
  */
 import * as Router from 'koa-router';
-import { {{file.startCaseName}} } from './{{file.name}}.controller';
+import { {{file.startCaseName}}Controller } from './{{file.name}}.controller';
 const router = new Router();
 const {{file.camelCaseName}} = new {{file.startCaseName}}Controller();
 
