@@ -1,14 +1,14 @@
 ﻿/**
  * @Copy Right 2018 北京百刻科技有限公司
- * Created by 宋宝文 on 2018/11/23.
+ * Created by 宋宝文 on {{date}}.
  * The file name is {{file.name}}.controller.ts
  * platform 百刻科技后端管理平台
- * Project 商城管理系统
- * The file was last modified on 2018/11/23
+ * Project {{file.project}}管理系统
+ * The file was last modified on {{date}}
  * PIC 宋宝文
  * author 宋宝文
  * Modifier 宋宝文
- * Functions 订单信息
+ * Functions {{file.description}}
  */
 import { Context } from 'koa';
 import { {{file.startCaseName}} } from './{{file.name}}.model';
