@@ -1,0 +1,28 @@
+/**
+ * @Copy Right 2018 北京百刻科技有限公司
+ * Created by 宋宝文 on {{date}}.
+ * The file name is {{file.name}}.model.ts
+ * platform 百刻科技后端管理平台
+ * Project {{file.project}}管理系统
+ * The file was last modified on {{date}}
+ * PIC 宋宝文
+ * author 宋宝文
+ * Modifier 宋宝文
+ * Functions {{file.description}}
+ */
+import { Schema, model, SchemaTypes } from 'mongoose';
+import { I{{file.startCaseName}}, I{{file.startCaseName}}Document, I{{file.startCaseName}}Model, IHandleOption } from './{{file.name}}.interface';
+import * as _ from 'lodash';
+
+const {{file.startCaseName}}Schema = new Schema({
+	
+}, {
+        timestamps: true
+    }
+);
+
+/**
+ * {{file.description}}
+ */
+export const {{file.startCaseName}}: I{{file.startCaseName}}Model = model<I{{file.startCaseName}}, I{{file.startCaseName}}Model>('{{file.startCaseName}}', {{file.startCaseName}}Schema);
+export default {{file.startCaseName}};

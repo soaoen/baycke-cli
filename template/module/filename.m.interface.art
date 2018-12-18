@@ -1,0 +1,34 @@
+/**
+ * @Copy Right 2018 北京百刻科技有限公司
+ * Created by 宋宝文 on {{date}}.
+ * The file name is {{file.name}}.interface.ts
+ * platform 百刻科技后端管理平台
+ * Project {{file.project}}管理系统
+ * The file was last modified on {{date}}
+ * PIC 宋宝文
+ * author 宋宝文
+ * Modifier 宋宝文
+ * Functions {{file.description}}
+ */
+import { Document, Model, model } from 'mongoose';
+
+/**
+ * 订单信息文档
+ */
+export interface I{{file.startCaseName}}Document extends Document {
+	
+}
+
+/**
+ * 订单信息
+ */
+export interface I{{file.startCaseName}} extends I{{file.startCaseName}}Document {
+
+}
+
+/**
+ * 订单信息模型
+ */
+export interface I{{file.startCaseName}}Model extends Model<I{{file.startCaseName}}> {
+    
+}
