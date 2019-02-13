@@ -12,7 +12,7 @@ program.version(require('../package').version)
 const printGenerateExamples = () => {
     console.log('');
     console.log('Examples:');
-    console.log('  song g module testpath1/testpath2 -n testname -d 测试文件 -p 我的项目');
+    console.log('  bk g module testpath1/testpath2 -n testname -d 测试文件 -p 我的项目');
     console.log('');
 }
 
